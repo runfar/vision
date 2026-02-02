@@ -1,0 +1,11 @@
+conda deactivate
+conda env remove --prefix .conda
+conda create --prefix .conda python=3.11
+conda activate ./.conda
+
+pip install opencv-python
+pip install torch 
+pip install tensorflow
+pip install torchvision torchaudio
+
+
