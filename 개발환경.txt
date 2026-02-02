@@ -7,5 +7,6 @@ pip install opencv-python
 pip install torch 
 pip install tensorflow
 pip install torchvision torchaudio
-
-
+pip install PyQt5
+pip install simpleaudio
+pip install matplotlib
