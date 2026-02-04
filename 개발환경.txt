@@ -3,10 +3,19 @@ conda env remove --prefix .conda
 conda create --prefix .conda python=3.11
 conda activate ./.conda
 
+# 시스템 라이브러리 먼저 설치
+sudo apt-get install libxcb-xinerama0 libxcb-icccm4 libxcb-image0 libxcb-keysyms1 libxcb-randr0 libxcb-render-util0 libxcb-xkb1 libxkbcommon-x11-0
+
+CUDA toolkit 12.2 설치.
+pip install "numpy<2"
+pip install --force-reinstall tensorflow[and-cuda]==2.15.1
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
+
 pip install opencv-python
-pip install torch 
-pip install tensorflow
-pip install torchvision torchaudio
-pip install PyQt5
+conda install -c conda-forge pyqt
 pip install simpleaudio
 pip install matplotlib
+
+CUDA 지원 빌드: True
+CUDA 버전: 12.2
+cuDNN 버전: 8
